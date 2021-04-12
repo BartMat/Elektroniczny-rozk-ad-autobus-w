@@ -2,7 +2,6 @@
   Import.cpp
 C:\Users\matus\OneDrive\Pulpit\Projekt PK4\Elektroniczny rozkład  autobusów\Elektroniczny rozkład  autobusów\Import.cpp(56,34): warning C4101: "e": lokalna zmienna, do której nie istnieje odwołanie
   main.cpp
-  Przystanek.cpp
-  Trasa.cpp
   Generowanie kodu...
+C:\Users\matus\OneDrive\Pulpit\Projekt PK4\Elektroniczny rozkład  autobusów\Elektroniczny rozkład  autobusów\Baza.cpp(47): warning C4172: zwracanie adresu lokalnej zmiennej lub tymczasowej: przystanek
   Elektroniczny rozkład  autobusów.vcxproj -> C:\Users\matus\OneDrive\Pulpit\Projekt PK4\Elektroniczny rozkład  autobusów\Debug\Elektroniczny rozkład  autobusów.exe

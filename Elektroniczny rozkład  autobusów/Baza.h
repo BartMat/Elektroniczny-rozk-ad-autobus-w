@@ -13,12 +13,14 @@ class Baza: public Trasa
 
 public:
 	Baza();
+	~Baza();
 	void dodaj_autobus(Autobus a);
 	void dodaj_przystanek(Przystanek p);
 	void dodaj_trase(Trasa t);
-	const vector<Autobus>& get_autobusy();
-	const vector<Przystanek>& get_przystanki();
-	const vector<Trasa>& get_trasy();
+	vector<Autobus> get_autobusy() const;
+	vector<Przystanek> get_przystanki() const;
+	vector<Trasa> get_trasy() const;
+	Przystanek* szukaj_przystanek(string s);
 
 };
 
