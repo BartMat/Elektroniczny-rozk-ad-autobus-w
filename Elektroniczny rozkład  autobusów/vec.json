@@ -1,0 +1,12 @@
+[
+    {
+        "autobus": 200,
+        "kierunek": "przystanek8",
+        "przystanki": [
+            "przystanek5",
+            "przystanek6",
+            "przystanek7",
+            "przystanek8"
+        ]
+    }
+]
