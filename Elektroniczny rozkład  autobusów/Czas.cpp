@@ -25,10 +25,12 @@ Czas::Czas()
     godzina = 0;
 }
 
-Czas::Czas(int g, int m)
+Czas::Czas(string czasStr)
 {
-    godzina = g;
-    minuta = m;
+    int index = czasStr.find(":");
+
+    godzina = stoi(czasStr.substr(0, index));
+    minuta = std::stoi(czasStr.substr(index + 1));
 }
 
 Czas::~Czas()

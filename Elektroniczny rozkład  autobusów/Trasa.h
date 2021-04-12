@@ -10,8 +10,8 @@ class Trasa: public Przystanek, protected Autobus
 
 public:
 	Trasa();
-	Trasa(int n, string k, vector<Przystanek>p);
-	Trasa(Autobus a, vector<Przystanek>p);
+	Trasa(int n, string k);
+	void dodajPrzystanek(Przystanek przystanek);
 	void wypisz();
 };
 

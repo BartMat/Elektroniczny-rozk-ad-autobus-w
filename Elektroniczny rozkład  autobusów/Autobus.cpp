@@ -23,6 +23,11 @@ string Autobus::get_kier()
 	return kierunek;
 }
 
+void Autobus::wypisz()
+{
+	cout << "Autobus nr: " << nr << "\tkierunek: " << kierunek;
+}
+
 ostream& operator<<(ostream& os, const Autobus& a)
 {
 	os << a.nr << " -> " << a.kierunek;

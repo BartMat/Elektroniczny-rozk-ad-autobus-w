@@ -15,5 +15,6 @@ public:
 	friend ostream& operator<<(ostream& os, const Autobus& a);
 	int get_nr();
 	string get_kier();
+	void wypisz();
 };
 

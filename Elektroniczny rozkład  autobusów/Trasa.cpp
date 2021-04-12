@@ -4,11 +4,15 @@ Trasa::Trasa()
 {
 }
 
-Trasa::Trasa(int n, string k, vector<Przystanek> p):Autobus(n, k)
+Trasa::Trasa(int n, string k):Autobus(n, k)
 {
-	
-	przystanki = p;
 }
+
+void Trasa::dodajPrzystanek(Przystanek przystanek)
+{
+	przystanki.push_back(przystanek);
+}
+
 
 
 void Trasa::wypisz()

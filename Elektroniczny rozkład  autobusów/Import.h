@@ -19,5 +19,6 @@ public:
 	Import();
 	Import(string s);
 	void wczytaj(Baza& baza);
+	void konstruuj_baze(Baza& baza,json j);
 };
 

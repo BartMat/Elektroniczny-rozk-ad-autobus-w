@@ -18,3 +18,18 @@ void Baza::dodaj_trase(Trasa t)
 {
 	trasy.push_back(t);
 }
+
+const vector<Autobus>& Baza::get_autobusy()
+{
+	return autobusy;
+}
+
+const vector<Przystanek>& Baza::get_przystanki()
+{
+	return przystanki;
+}
+
+const vector<Trasa>& Baza::get_trasy()
+{
+	return trasy;
+}

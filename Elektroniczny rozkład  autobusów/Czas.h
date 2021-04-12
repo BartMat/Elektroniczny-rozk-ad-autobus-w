@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 using namespace std;
 class Czas
 {
@@ -8,7 +9,7 @@ class Czas
 
 public:
 	Czas();
-	Czas(int g, int m);
+	Czas(string czasStr);
 	~Czas();
 
 	int get_g();

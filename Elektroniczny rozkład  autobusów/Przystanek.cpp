@@ -2,12 +2,11 @@
 
 Przystanek::Przystanek()
 {
-	id = 0;
+
 }
 
-Przystanek::Przystanek(int i, string n)
+Przystanek::Przystanek(string n)
 {
-	id = i;
 	nazwa = n;
 }
 
@@ -30,8 +29,24 @@ void Przystanek::wypisz()
 	}
 }
 
+string Przystanek::get_nazwa()
+{
+	return nazwa;
+}
+
+
+
 ostream& operator<<(ostream& os, const Przystanek& p)
 {
 	os << p.nazwa;
 	return os;
+}
+
+bool operator==(const Przystanek& lhs, const Przystanek& rhs)
+{
+	if(lhs.nazwa==rhs.nazwa)
+	{
+		return true;
+	}
+	return false;
 }

@@ -5,6 +5,7 @@
 #include "Trasa.h"
 #include "json.hpp"
 #include <fstream>
+#include "Import.h"
 using namespace std;
 using json = nlohmann::json;
 
@@ -183,17 +184,44 @@ int main()
 	//cout<<q11.dump(4);
 
 	ifstream we("chybaok.json");
-	json j;
-	we >> j;
+
+	//
+	
+
+	auto j = json::parse(we);
+
+	////for (auto& elem : j) {
+	//	const auto& przystanek = j[0]["przystanki"];
+
+	//	for (auto it = przystanek.begin(); it != przystanek.end(); ++it) {
+	//		std::cout << it.key() << " jedzie o godzinach: " << it.value() << std::endl;
+	//	}
+	////}
+	
 	we.close();
 
+	Import imp("chybaok.json");
+	Baza bz;
 
-	for (const auto& x : j)
+	imp.konstruuj_baze(bz, j);
+	
+	for (auto x : bz.get_autobusy())
 	{
-		std::cout << x["autobus"] << " -> " << x["przystanki"]["przystanek2"].size() << std::endl;
-		
+		cout << x << endl;
 	}
 
+	for (auto x : bz.get_przystanki())
+	{
+		cout << x.get_nazwa() << endl;
+		x.wypisz();
+		cout << endl;
+	}
 
+	for (auto x : bz.get_trasy())
+	{
+		
+		x.wypisz();
+		cout << endl;
+	}
 	return 0;
 }
